@@ -108,7 +108,7 @@ const Content: React.FC = () => {
       <div className="col-span-3">
         <div>
           {notes?.map((note) => (
-            <div id={note.id} className="mt-5">
+            <div key={note.id} className="mt-5">
               <NoteCard
                 note={note}
                 onDelete={() => deleteNote.mutate({ id: note.id })}
